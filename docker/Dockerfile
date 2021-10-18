@@ -15,8 +15,8 @@ COPY --chown=webgoat target/webgoat-server-${webgoat_version}.jar /home/webgoat/
 COPY --chown=webgoat target/webwolf-${webgoat_version}.jar /home/webgoat/webwolf.jar
 COPY --chown=webgoat start.sh /home/webgoat
 
-EXPOSE 8080
-EXPOSE 9090
+EXPOSE 8282
+EXPOSE 9292
 
 WORKDIR /home/webgoat
 ENTRYPOINT /bin/bash /home/webgoat/start.sh $webgoat_version_env
