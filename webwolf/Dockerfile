@@ -10,7 +10,7 @@ USER webwolf
 COPY target/webwolf-${webwolf_version}.jar /home/webwolf/webwolf.jar
 COPY start-webwolf.sh /home/webwolf
 
-EXPOSE 9090
+EXPOSE 9292
 
 ENTRYPOINT ["/home/webwolf/start-webwolf.sh"]
-CMD ["--server.port=9090", "--server.address=0.0.0.0"]
+CMD ["--server.port=9292", "--server.address=0.0.0.0"]
