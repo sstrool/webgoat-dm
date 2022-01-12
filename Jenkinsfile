@@ -17,17 +17,6 @@ pipeline {
        echo 'testing the application...'
      }
    }
-    stage('Coverity Full Scan') {
-      steps {
-        withCoverityEnvironment(coverityInstanceUrl: "$CONNECT", projectName: "$PROJECT", streamName: "$STREAM") {
-            sh '''
-                cov-build --dir idir /Users/dylanm/Build-Tools/apache-maven-3.8.3/bin/mvn -B clean package -DskipTests
-                cov-analyze --dir idir --strip-path $WORKSPACE --webapp-security
-                cov-commit-defects --dir idir --url $COV_URL --stream $COV_STREAM --scm git
-            '''
-        }
-    }
-}
 
    stage("BlackDuck Detect") {
       steps {
