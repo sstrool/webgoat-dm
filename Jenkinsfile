@@ -28,7 +28,6 @@ pipeline {
         }
       }
     }
-
    stage("BlackDuck Detect") {
       steps {
        script {
