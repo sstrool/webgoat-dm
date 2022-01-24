@@ -31,7 +31,7 @@ pipeline {
    stage("BlackDuck Detect") {
       steps {
        script {
-         synopsys_detect '--detect.tools=BINARY_SCAN --detect.project.name=SPM-${JOB_NAME} --detect.project.version.name=${GIT_BRANCH} --detect.maven.path=/Users/dylanm/Build-Tools/apache-maven-3.8.3/bin/mvn --detect.binary.scan.file.path=/Users/dylanm/Projects/webgoat/webgoat-server/target/webgoat-server-8.2.1-SNAPSHOT.jar'
+         synopsys_detect '--detect.tools=DETECTOR,BINARY_SCAN --detect.project.name=SPM-${JOB_NAME} --detect.project.version.name=${GIT_BRANCH} --detect.maven.path=/Users/dylanm/Build-Tools/apache-maven-3.8.3/bin/mvn --detect.binary.scan.file.path=/Users/dylanm/Projects/webgoat/webgoat-server/target/webgoat-server-8.2.1-SNAPSHOT.jar'
         }
       }
     }
