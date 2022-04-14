@@ -1,6 +1,6 @@
-def CONNECT = 'http://192.168.56.103:8080'
-def PROJECT = 'Webgoat8'
-def STREAM = 'WebGoat8'
+def CONNECT = 'https://testing.coverity.synopsys.com'
+def PROJECT = 'Webgoat'
+def STREAM = 'WebGoat'
 
 pipeline {
   
