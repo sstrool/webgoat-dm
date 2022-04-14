@@ -1,6 +1,6 @@
 def CONNECT = 'https://testing.coverity.synopsys.com'
-def PROJECT = 'Webgoat'
-def STREAM = 'WebGoat'
+def PROJECT = 'webgoat'
+def STREAM = 'webgoat-dcm'
 
 pipeline {
   
