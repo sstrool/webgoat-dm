@@ -17,7 +17,7 @@ pipeline {
        echo 'testing the application...'
       }
     }
-   stage('Coverity Full Scan') {
+/*    stage('Coverity Full Scan') {
      steps {
        withCoverityEnvironment(coverityInstanceUrl: "$CONNECT", projectName: "$PROJECT", streamName: "$STREAM") {
             sh '''
@@ -27,7 +27,7 @@ pipeline {
             '''
         }
       }
-    }
+    } */
    stage("BlackDuck Detect") {
       steps {
        script {
